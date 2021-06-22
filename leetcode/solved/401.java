@@ -9,6 +9,22 @@ class Solution {
     int turnedOn;
 
     public List<String> readBinaryWatch(int turnedOn) {
+        
+                        //枚举类觉
+//                List<String> list = new ArrayList<>();
+//                for (int i = 0; i < 12; i++) {
+//                    for (int j = 0; j < 60; j++) {
+//                        //这里主要讲解一下Integer.bitCount(i)函数
+//                        //这个函数主要用于计算一个整数转成二进制数之后，
+//                        if (Integer.bitCount(i) + Integer.bitCount(j) == turnedOn) {
+//                            list.add(i + ":" + (j < 10 ? "0" + j : j));
+//                        }
+//                    }
+//                }
+//                return list;
+//            }
+        
+        
         this.turnedOn = turnedOn;
         getTime(0,0,0,0);
         List<String> list = new ArrayList<>();
