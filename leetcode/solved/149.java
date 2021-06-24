@@ -1,6 +1,31 @@
 
 class Solution {
     int res = 0;
+//另外一种解法，暴力枚举    
+//	public int maxPoints(int[][] points) {
+//        int n = points.length;
+//    	int ans=1;
+//        for(int i=0;i<n;i++) {
+//            if(ans>=n-i){
+//                return ans;
+//            }
+//        	int x[] = points[i];
+//        	for(int j=i+1;j<n;j++) {
+//        		int y[] = points[j];
+//        		int sum=2;
+//        		for(int k=j+1;k<n;k++) {
+//        			int p[] = points[k];
+//        			int s1 = (x[1]-y[1]) * (y[0]-p[0]);
+//        			int s2 = (x[0]-y[0]) * (y[1]-p[1]);
+//        			if(s1==s2) {
+//        				sum++;
+//        			}
+//        		}
+//        		ans = Math.max(ans, sum);
+//        	}
+//        }
+//        return ans;
+//    }
 
     public int maxPoints(int[][] points) {
         for (int i = 0; i < points.length; i++) {
