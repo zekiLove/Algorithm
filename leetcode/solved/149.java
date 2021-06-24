@@ -27,6 +27,32 @@ class Solution {
 //        return ans;
 //    }
 
+    
+//另一种解法.Hash表记录求解
+//   public int maxPoints(int[][] points) {
+//        int n = points.length;
+//    	int res = 0;
+//        for(int i=0;i<n;i++) {
+//        	HashMap<String,Integer> map = new HashMap<>();
+//        	int max = 0;//这里必须要设置为0，因为这是记录和points[i]结点的斜率相同的点的个数，这些点并不包含points[i]
+//        	for(int j=i+1;j<n;j++) {
+//        		int x1 = points[i][0],x2=points[j][0];
+//        		int y1 = points[i][1],y2=points[j][1];
+//        		int dX = x1-x2;
+//        		int dY = y1-y2;
+//        		int k = gsc(dX,dY); //这里顺序别反了，因为分母不能为0；
+//        		String key = (dX/k) +"_" + (dY/k);
+//        		map.put(key,map.getOrDefault(key, 0)+1);
+//        		max = Math.max(max, map.get(key));//这里是对当前斜率的出现的次数+1
+//        	}
+//        	res = Math.max(res, max+1);//这里max+1是加上自己本身。
+//        }
+//        return res;
+//    }
+//	
+//	public int gsc(int a,int b) {
+//		return b==0 ? a : gsc(b,a%b);
+//	}
     public int maxPoints(int[][] points) {
         for (int i = 0; i < points.length; i++) {
             int x1 = points[i][0];
