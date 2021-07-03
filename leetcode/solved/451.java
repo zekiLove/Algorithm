@@ -1,4 +1,33 @@
 class Solution {
+	
+		//另一种解
+//	public String frequencySort(String s) {
+//
+//		HashMap<String, Integer> map = new HashMap<>();
+//		for (int i = 0; i < s.length(); i++) {
+//			String str = s.substring(i, i + 1);
+//			map.put(str, map.getOrDefault(str, 0) + 1);
+//		}
+//
+//		int arr[] = new int[map.size()];
+//		String arr1[] = new String[arr.length];
+//		int index = 0;
+//
+//		List<String> list = new ArrayList<>(map.keySet());
+//		Collections.sort(list,(a,b)->map.get(b)-map.get(a));
+//		
+//		StringBuffer sb = new StringBuffer();
+//		for(String e : list) {
+//			
+//			int c = map.get(e);
+//			for(int i=0;i<c;i++) {
+//				sb.append(e);
+//			}
+//		}
+//		
+//		return sb.toString();
+//		
+//	}
 	public String frequencySort(String s) {
 
 		HashMap<String, Integer> map = new HashMap<>();
