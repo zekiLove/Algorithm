@@ -20,7 +20,7 @@
 
 		return (sum - maxV + modVal) % modVal;
 	}
-  //这个方法用于寻找在arr种第一个大于target的数的索引
+  //这个方法用于寻找在arr种第一个大于或等于target的数的索引
 	public int binarySearch(int r[], int target) {
 		int n = r.length;
 		int low = 0;
